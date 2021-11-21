@@ -23,7 +23,7 @@ Then to encrypt a data you use `Encryption::encrypt(string $data, string $cipher
     //After you want to use it again on your site <br>
     //Get your text: $ encrypt and then decrypt it <br>
     $decrypt = Encryption::encrypt($encrypt); <br>
-   //Et c'est tout ! <br>
+   //All right ! <br>
 </code> </pre>
 ## Information
 The encryption method used by default is : AES-128-CBC
