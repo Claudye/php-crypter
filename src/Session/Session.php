@@ -5,7 +5,9 @@ use Simplecode\Contracts\SessionInterface;
 
 class Session implements SessionInterface{
 
-    
+    /**
+     * @inheritDoc
+     */
     public function regenerate($destroy = false)
     {
         $_SESSION= array();
@@ -16,11 +18,18 @@ class Session implements SessionInterface{
         return $this->start();
         
     }
+    /**
+     * @inheritDoc
+     */
     public function token()
     {
         $token = new Token($this->getId());
         return $token->getToken();
     }
+
+     /**
+     * @inheritDoc
+     */
     public function put($key, $value = null)
     {
         if (is_string($key) && strlen($key)>1) {
@@ -31,6 +40,9 @@ class Session implements SessionInterface{
            $_SESSION= array_merge($_SESSION,$key);
         }
     }
+     /**
+     * @inheritDoc
+     */
     public function pull($key, $default = null)
     {
         
@@ -41,6 +53,9 @@ class Session implements SessionInterface{
             return $_SESSION[$key];
         }
     }
+     /**
+     * @inheritDoc
+     */
     public function has($key)
     {
         if ($this->exists($key)) {
@@ -54,6 +69,9 @@ class Session implements SessionInterface{
             return !is_null($_SESSION[$key]);
          }
     }
+     /**
+     * @inheritDoc
+     */
     public function remove($key)
     {
         if ($this->has($key)) {
@@ -79,15 +97,25 @@ class Session implements SessionInterface{
     {
         return $_SESSION;
     }
+     /**
+     * @inheritDoc
+     */
     public function save()
     {
         
     }
+     /**
+     * @inheritDoc
+     * @return string|null
+     */
     public function getId()
     {
         return session_id();
     }
 
+     /**
+     * @inheritDoc
+     */
     public function getName()
     {
         

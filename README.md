@@ -5,7 +5,8 @@ Secure the data of your sites by encrypting them. They will be decrypted only in
 You just have to include the file `vendor/autoload.php` in the file (s) you want to use Encrypt
 Then to encrypt a data you use `Encryption::encrypt(string $data, string $cipher_method,string $token)` and to decrypt later you use the method : `Encryption::decrypt()`
 #### Exemple
- <pre> <code><?php
+ <pre> <code>
+    <?php
     use Simplecode\Encryption\Encryption; <br>
     require 'vendor/autoload.php'; <br>
     // Encrypt the text "The only limit of a developer is his imagination" <br> <br>
