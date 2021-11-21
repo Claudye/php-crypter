@@ -1,7 +1,7 @@
 # Crypter
 Secure the data of your sites by encrypting them. They will be decrypted only in your applications
 
-## Utilisation
+## How to use ?
 You just have to include the file `vendor/autoload.php` in the file (s) you want to use Encrypt
 Then to encrypt a data you use `Encryption::encrypt(string $data, string $cipher_method,string $token)` and to decrypt later you use the method : `Encryption::decrypt()`
 #### Exemple
