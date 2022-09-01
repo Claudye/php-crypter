@@ -51,6 +51,7 @@ Secure the data of your websites by encrypting them. They will be decrypted only
 # Change encryption key path!
 
  It is possible to change the encryption key path (file or directory) where you want to store the secret key! It's a good idea to choose a very secure path
+ All you have to do is define a constant called: ENC_TOKEN_PATH , in your project where our script can find it
 
 # Information
 The encryption method used by default is : AES-128-CBC

@@ -8,6 +8,7 @@ use PHPCrypter\Contracts\KeyNotFoundExceptioninterface;
  */
 class Token
 {
+    public const KEY_SIZE = 256 ;
     /**
      * path
      * @var string
@@ -106,15 +107,14 @@ class Token
                 $key = file_get_contents($filename);
             }
             //Create key if not exist
-            if (strlen($key) < 32) {
+            if (strlen($key) < static::KEY_SIZE) {
                 file_put_contents($filename, base64_encode($randomString));
             }
         };
 
-        $count = 64;
-        $randomString = bin2hex(random_bytes($count));
+        $bytes = openssl_random_pseudo_bytes(static::KEY_SIZE, $cstrong);
+        $randomString   = bin2hex($bytes);
 
-        $randomString;
         //File path
         $this->token_path = is_file($this->token_path) ? $this->token_path : rtrim($this->token_path, '/') . "/enc_key.txt";
 
