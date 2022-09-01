@@ -2,6 +2,7 @@
     "name": "claudye/php-crypter",
     "description": "Secure the data of your websites by encrypting them. They will be decrypted only in your applications with your secret key",
     "type": "library",
+    "keywords": ["php","php-encryption","encryption-decryption"],
     "homepage": "https://github.com/Claudye/php-crypter",
     "require": {
         "php": ">=7.3 || 8.2"
