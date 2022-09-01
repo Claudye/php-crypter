@@ -6,7 +6,7 @@ Secure the data of your websites by encrypting them. They will be decrypted only
   ## With composer
 
   * Firstly you need composer 
-  * Run the command `composer require claudye/php-crypter`
+  * Run the command `composer require claudye/php-crypter:dev-master`
 
   ## Clone or download from github
   * Clone or download from  [github](https://github.com/Claudye/php-crypter)
