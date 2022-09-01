@@ -1,0 +1,24 @@
+{
+    "name": "claudye/php-crypter",
+    "description": "Secure the data of your websites by encrypting them. They will be decrypted only in your applications with your secret key",
+    "type": "library",
+    "homepage": "https://github.com/Claudye/php-crypter",
+    "require": {
+        "php": ">=7.3 || 8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PHPCrypter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Claudye",
+            "email": "dev.claudy@gmail.com"
+        }
+    ]
+}
